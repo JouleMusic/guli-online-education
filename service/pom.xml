@@ -12,6 +12,7 @@
     <artifactId>service</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>service-vod</module>
         <module>service-edu</module>
     </modules>
 

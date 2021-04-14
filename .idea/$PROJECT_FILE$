@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisProjectProfileManager">
+    <option name="PROJECT_PROFILE" />
+    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
+    <list size="0" />
+  </component>
+  <component name="FindBugs-IDEA">
+    <excludeFilterFiles>
+      <filter file="D:/03-MyDocs/开发配置/validate/findbugs/findbugs-exclude-filter.xml" enabled="true" />
+    </excludeFilterFiles>
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>
