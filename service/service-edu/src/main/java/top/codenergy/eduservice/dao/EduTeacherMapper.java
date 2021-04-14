@@ -10,7 +10,12 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 @Mapper
 public interface EduTeacherMapper extends BaseMapper<EduTeacher> {
-
+    /**
+     * 根据id进行逻辑删除
+     * @param id id
+     * @return 删除成功标识
+     */
+    Boolean removeLogicalById(String id);
 }
 
 

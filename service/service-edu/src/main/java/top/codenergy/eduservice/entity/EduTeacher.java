@@ -2,13 +2,16 @@ package top.codenergy.eduservice.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
-import lombok.Data;
 
 /**
  * 讲师
+ * @author wangyu
  * @TableName edu_teacher
  */
 @TableName(value ="edu_teacher")
@@ -53,6 +56,7 @@ public class EduTeacher implements Serializable {
     /**
      * 逻辑删除 1（true）已删除， 0（false）未删除
      */
+    @TableLogic(value = "0",delval = "1")
     private Boolean isDeleted;
 
     /**

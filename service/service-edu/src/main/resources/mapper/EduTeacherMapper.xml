@@ -23,4 +23,11 @@
         sort,is_deleted,gmt_create,
         gmt_modified
     </sql>
+    <update id="removeLogicalById" parameterType="String">
+        update edu_teacher
+        <set>
+            is_deleted = 1
+        </set>
+        where id = #{id}
+    </update>
 </mapper>
