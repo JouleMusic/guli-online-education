@@ -32,8 +32,7 @@ public class ResultObj {
     /**
      * 私有化构造器，其他人就无法随便使用，必须要用该类自定义的静态方法
      */
-    private ResultObj(){
-    }
+    private ResultObj(){}
 
     /**
      * 成功返回的静态方法

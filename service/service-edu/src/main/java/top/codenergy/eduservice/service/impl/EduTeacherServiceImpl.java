@@ -27,7 +27,7 @@ public class EduTeacherServiceImpl extends ServiceImpl<EduTeacherMapper, EduTeac
     public Boolean removeLogicalById(String id) {
         //先查询id是否存在（只能只计算id记录数来判断是否存在）
         QueryWrapper<EduTeacher> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("id",id).eq("is_deleted",0).last("limit 1");
+        queryWrapper.eq("id", Long.parseLong(id)).eq("is_deleted",0).last("limit 1");
         Integer flag = teacherMapper.selectCount(queryWrapper);
         if (flag > 0){
             return teacherMapper.removeLogicalById(id);
