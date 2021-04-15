@@ -22,10 +22,5 @@
             <artifactId>hutool-all</artifactId>
             <version>5.6.2</version>
         </dependency>
-        <dependency>
-            <groupId>top.codenergy</groupId>
-            <artifactId>service-base</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 </project>

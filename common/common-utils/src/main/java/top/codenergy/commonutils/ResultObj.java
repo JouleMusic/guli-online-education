@@ -2,7 +2,6 @@ package top.codenergy.commonutils;
 
 
 import lombok.Data;
-import lombok.experimental.Accessors;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,7 +11,6 @@ import java.util.Map;
  *
  */
 @Data
-@Accessors(chain = true)
 public class ResultObj {
     /**
      * 是否返回成功
@@ -62,9 +60,29 @@ public class ResultObj {
     }
 
     //链式
+    public ResultObj success(Boolean success) {
+        this.setSuccess(success);
+        return this;
+    }
 
+    public ResultObj message(String message) {
+        this.setMessage(message);
+        return this;
+    }
 
+    public ResultObj code(Integer code) {
+        this.setCode(code);
+        return this;
+    }
 
+    public ResultObj data(String key, Object value) {
+        this.data.put(key, value);
+        return this;
+    }
 
+    public ResultObj data(Map<String, Object> map) {
+        this.setData(map);
+        return this;
+    }
 
 }

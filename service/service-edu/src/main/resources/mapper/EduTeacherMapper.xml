@@ -28,6 +28,6 @@
         <set>
             is_deleted = 1
         </set>
-        where id = #{id}
+        where id = #{id} and is_deleted = 0
     </update>
 </mapper>
