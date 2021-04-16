@@ -59,6 +59,7 @@ public class EduTeacherController {
                                  @PathVariable Long limit){
         // 创建page
         Page<EduTeacher> pageTeacher = new Page<>(current, limit);
+        int i = 10/0;
         // 调用方法实现分页
         // 调用方法时底层封装，把分页数据封装到pageTeacher中
         teacherService.page(pageTeacher, null);
@@ -93,7 +94,7 @@ public class EduTeacherController {
         String begin = teacherQueryVo.getBegin();
         String end = teacherQueryVo.getEnd();
         // 判断条件是否为空，拼接条件
-        wrapper.likeRight(!StrUtil.isEmpty(name),"name",name.replace("*",""))
+        wrapper.likeRight(!StrUtil.isEmpty(name),"name",name)
                 .eq(level != null,"level",level)
                 .eq(!StrUtil.isEmpty(begin),"gmt_create",begin)
                 .eq(!StrUtil.isEmpty(end),"gmt_create",end)
