@@ -14,6 +14,7 @@ import top.codenergy.commonutils.ResultObj;
 import top.codenergy.eduservice.entity.EduTeacher;
 import top.codenergy.eduservice.service.EduTeacherService;
 import top.codenergy.eduservice.vo.TeacherQueryVo;
+import top.codenergy.servicebase.exceptionhandler.GuliException;
 
 import java.util.HashMap;
 import java.util.List;
@@ -59,7 +60,11 @@ public class EduTeacherController {
                                  @PathVariable Long limit){
         // 创建page
         Page<EduTeacher> pageTeacher = new Page<>(current, limit);
-        int i = 10/0;
+        try{
+            int i = 10/0;
+        } catch (Exception e){
+            throw new GuliException(20001,"自定义异常处理。");
+        }
         // 调用方法实现分页
         // 调用方法时底层封装，把分页数据封装到pageTeacher中
         teacherService.page(pageTeacher, null);
