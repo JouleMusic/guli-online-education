@@ -8,7 +8,7 @@
             <option name="annotationType" value="MYBATIS_PLUS3" />
             <option name="basePackage" value="top.codenergy" />
             <option name="basePath" value="src/main/java" />
-            <option name="domainObjectName" value="EduTeacher" />
+            <option name="domainObjectName" value="EduSubject" />
             <option name="encoding" value="UTF-8" />
             <option name="extraTemplateNames">
               <list>
@@ -22,7 +22,7 @@
             <option name="modulePath" value="$PROJECT_DIR$/service/service-edu" />
             <option name="needsComment" value="true" />
             <option name="relativePackage" value="entity" />
-            <option name="tableName" value="edu_teacher" />
+            <option name="tableName" value="edu_subject" />
             <option name="targetProject" value="$PROJECT_DIR$" />
             <option name="templatesName" value="mybatis-plus3" />
             <option name="useLombokPlugin" value="true" />
