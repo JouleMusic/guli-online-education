@@ -10,9 +10,11 @@ import top.codenergy.eduservice.entity.EduSubject;
 import top.codenergy.eduservice.entity.excel.SubjectData;
 import top.codenergy.eduservice.listener.SubjectExcelListener;
 import top.codenergy.eduservice.service.EduSubjectService;
+import top.codenergy.eduservice.vo.OneSubjectVo;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  *
@@ -31,6 +33,12 @@ implements EduSubjectService{
         try (InputStream in = file.getInputStream()) {
             EasyExcel.read(in, SubjectData.class,new SubjectExcelListener(subjectService)).sheet().doRead();
         }
+    }
+
+    @Override
+    public List<OneSubjectVo> getAllOneTwoSubject() {
+        //TODO
+        return null;
     }
 }
 
